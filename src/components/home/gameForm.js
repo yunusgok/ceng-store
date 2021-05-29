@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import {  Form, Button, Col, Row, InputGroup,FormControl} from 'react-bootstrap';
 
+import * as homeRequests from "../../requests/homeRequests"
 
 export const GameForm = () =>{
 
@@ -12,7 +13,7 @@ export const GameForm = () =>{
         photo: "",
         enabled: true,
         comments: [],
-        rating: []
+        ratings: []
 
     })
 
@@ -84,6 +85,11 @@ export const GameForm = () =>{
         console.log()
     }
 
+    const saveGame = () =>{
+        console.log(state)
+        homeRequests.addGame(state);
+    }
+
 
     return (
         <Form>
@@ -119,8 +125,7 @@ export const GameForm = () =>{
                     <Form.Control type="text" placeholder={"Enter ".concat(item)} name={item} value={state.item} onChange={handleChange} />
                 </Form.Group>
                 ))}
-            
-
+            <Button onClick={saveGame}>Save </Button>
         </Form>
         
     )
