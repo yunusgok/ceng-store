@@ -1,35 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col, Container, Button } from 'react-bootstrap';
 
-import GameForm from "./home/gameForm"
+import UserForm from "./home/userForm"
 import GameList from "./home/gameList"
 import * as homeRequests from "../requests/homeRequests"
+import UserList from './home/userList';
 
 
 const HomeGame = () =>{
 
-    const [games, setGames] = useState([]);
+    const [users, setUsers] = useState([]);
     
 
     useEffect(() => {
-        fetchGames()
+        fetchUsers()
       }, []);
 
-    const fetchGames = ()=>{
-        homeRequests.getAllGames().then((data)=> setGames(data));
-
+    const fetchUsers = ()=>{
+        homeRequests.getAllUsers().then((data)=> setUsers(data));
 
     }
 
     return (
         <Row>
-            <Col xs={12} md={6}><GameForm/></Col>
+            <Col xs={12} md={6}><UserForm/></Col>
 
             <Col xs={12} md={6}>
 
-                <Button onClick={fetchGames}>Fetch Games</Button>
+                <Button onClick={fetchUsers}>Fetch Users</Button>
 
-                <GameList games={games} fetch={fetchGames} />
+                <UserList users={users} fetch={fetchUsers} />
 
             </Col>
         </Row>

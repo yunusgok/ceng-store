@@ -13,7 +13,9 @@ export const GameForm = () =>{
         photo: "",
         enabled: true,
         comments: [],
-        ratings: []
+        ratings: [],
+        playTimes: [],
+        
 
     })
 
@@ -88,6 +90,7 @@ export const GameForm = () =>{
     const saveGame = () =>{
         console.log(state)
         homeRequests.addGame(state);
+
     }
 
 

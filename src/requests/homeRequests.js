@@ -40,3 +40,28 @@ export const enableComment = async (gameName)=>{
   const response  = await axios.get(homeUrl, param)
   return response.data
 }
+
+
+export const getAllUsers = async () =>{
+
+  const param = { params: { cmd: "getUsers" } }
+  const response  = await axios.get(homeUrl, param)
+
+  return response.data
+}
+
+
+export const addUser = async (doc)=>{
+
+  const param = { params: { cmd: "addUser", doc: doc } }
+  const response  = await axios.get(homeUrl, param)
+  return response.data
+}
+
+
+export const removeUser = async (userName)=>{
+
+  const param = { params: { cmd: "removeUser", userName: userName } }
+  const response  = await axios.get(homeUrl, param)
+  return response.data
+}

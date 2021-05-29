@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 
 import HomePage from "./Pages/HomePage"
 
+
 const App = () => {
     return (
       <Router>
