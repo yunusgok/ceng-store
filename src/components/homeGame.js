@@ -18,7 +18,6 @@ const HomeGame = () =>{
     const fetchGames = ()=>{
         homeRequests.getAllGames().then((data)=> setGames(data));
 
-
     }
 
     return (

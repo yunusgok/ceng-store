@@ -22,6 +22,9 @@ export const UserForm = () =>{
     const saveUser = () =>{
 
         homeRequests.addUser(state);
+        setState({
+            userName: "",
+        })
 
     }
 
@@ -30,7 +33,7 @@ export const UserForm = () =>{
         
             <Form.Group  controlId="formGridUserName">
                 <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter email" name="userName" value={state.userName} onChange={handleChange} />
+                <Form.Control type="text" placeholder="Enter username" name="userName" value={state.userName} onChange={handleChange} />
             </Form.Group>
 
             <Button onClick={saveUser}>Save </Button>

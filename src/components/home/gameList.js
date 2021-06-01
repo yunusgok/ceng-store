@@ -27,8 +27,8 @@ const GameList = (probs)=>{
             <ListGroup.Item >
                 <Row>
                     <Col sm={6}>{game.gameName}</Col>
-                    {game.enabled && <Col sm={2}><Button onClick={()=>disable(game.gameName)}>Disable </Button></Col>}
-                    {!game.enabled && <Col sm={2}><Button onClick={()=>enable(game.gameName)}>Enable </Button></Col>}
+                    {game.enabled && <Col sm={2}><Button variant="danger" onClick={()=>disable(game.gameName)}>Disable </Button></Col>}
+                    {!game.enabled && <Col sm={2}><Button variant="success" onClick={()=>enable(game.gameName)}>Enable </Button></Col>}
                     <Col sm={2}><Button onClick={()=>remove(game.gameName)} >Delete </Button></Col>
                 </Row>
             </ListGroup.Item>

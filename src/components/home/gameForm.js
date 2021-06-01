@@ -5,22 +5,21 @@ import {  Form, Button, Col, Row, InputGroup,FormControl} from 'react-bootstrap'
 import * as homeRequests from "../../requests/homeRequests"
 
 export const GameForm = () =>{
-
-    const [state, setState] = useState({
-
+    const initialState = {
         gameName: "",
         genre: [],
         photo: "",
         enabled: true,
-        
-
-    })
-
-    const [localState, setLocalState] = useState({
+    }
+    const initialLocalState = {
         currentGenre : "",
         fields: [],
         currentField:"",
-    })
+
+    }
+    const [state, setState] = useState(initialState)
+
+    const [localState, setLocalState] = useState(initialLocalState)
 
 
 
@@ -85,8 +84,9 @@ export const GameForm = () =>{
     }
 
     const saveGame = () =>{
-        console.log(state)
         homeRequests.addGame(state);
+        setState(initialState);
+        setLocalState(initialLocalState);
 
     }
 
