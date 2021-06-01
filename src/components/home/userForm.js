@@ -9,11 +9,6 @@ export const UserForm = () =>{
     const [state, setState] = useState({
 
         userName: "",
-        ratings:[],
-        comments: [],
-        playTimes: [],
-        games:[]
-
     })
 
     const handleChange = (evt) =>{

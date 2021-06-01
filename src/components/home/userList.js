@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, ListGroup, Button } from 'react-bootstrap';
 import * as homeRequests from "../../requests/homeRequests"
-
+import {Link} from 'react-router-dom'
 const UserList = (probs)=>{
 
     // const disable = (gameName)=>{
@@ -30,6 +30,14 @@ const UserList = (probs)=>{
                     {/* {game.enabled && <Col sm={2}><Button onClick={()=>disable(game.gameName)}>Disable </Button></Col>}
                     {!game.enabled && <Col sm={2}><Button onClick={()=>enable(game.gameName)}>Enable </Button></Col>} */}
                     <Col sm={2}><Button onClick={()=>remove(user.userName)} >Delete </Button></Col>
+                    <Col sm={2}>
+                        <Button className="text-white">
+                        <Link to={"/user/".concat(user.userName)} className="text-white">
+                            Login
+                        </Link>
+                        </Button>
+                    </Col>
+
                 </Row>
             </ListGroup.Item>
         </div>

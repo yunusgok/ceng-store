@@ -12,9 +12,6 @@ export const GameForm = () =>{
         genre: [],
         photo: "",
         enabled: true,
-        comments: [],
-        ratings: [],
-        playTimes: [],
         
 
     })
