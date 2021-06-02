@@ -38,7 +38,7 @@ export const GameForm = () =>{
             ...state,
             genre: newGenres,
           });
-          console.log(state)
+
         
     }
     const addField = () =>{
@@ -58,7 +58,7 @@ export const GameForm = () =>{
             fields: newFields,
             currentField:""
           });
-          console.log(state)
+
 
     }
 
@@ -68,8 +68,7 @@ export const GameForm = () =>{
           ...state,
           [evt.target.name]: value
         });
-        console.log(state)
-        console.log(localState)
+
         
     }
 
@@ -80,7 +79,7 @@ export const GameForm = () =>{
           [evt.target.name]: value
         });
 
-        console.log()
+
     }
 
     const saveGame = () =>{

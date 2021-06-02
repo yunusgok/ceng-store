@@ -23,7 +23,7 @@ const GameDetail = (probs) =>{
             totalPlayTime: data.totalPlayTime,
             comments: data.comments
         }))
-        console.log(state)
+
     }
 
     const DisplayComments = () => {

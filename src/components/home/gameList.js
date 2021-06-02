@@ -16,7 +16,7 @@ const GameList = (probs)=>{
     }
     
     const remove = (gameName)=>{
-        console.log("remove")
+
         homeRequests.removeGame(gameName);
         probs.fetch();
     }

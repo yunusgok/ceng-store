@@ -37,7 +37,7 @@ const UserGameList = (probs)=>{
           ...state,
           [evt.target.name]: value
         });
-        console.log(state);
+
     }
 
 

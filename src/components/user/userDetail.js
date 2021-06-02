@@ -7,7 +7,7 @@ const UserDetail = (probs) => {
 
 
     const renderComment = (comment, index) => {
-        console.log(comment)
+
         return(
             <div key={index}>
                 <ListGroup.Item >

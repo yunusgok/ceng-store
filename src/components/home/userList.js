@@ -16,7 +16,7 @@ const UserList = (probs)=>{
     // }
     
     const remove = (userName)=>{
-        console.log("remove")
+
         homeRequests.removeUser(userName);
         probs.fetch();
     }
