@@ -95,7 +95,7 @@ export const GameForm = () =>{
         
             <Form.Group  controlId="formGridGameName">
                 <Form.Label>Game Name</Form.Label>
-                <Form.Control type="text" placeholder="Enter email" name="gameName" value={state.gameName} onChange={handleChange} />
+                <Form.Control type="text" placeholder="Enter Game Name" name="gameName" value={state.gameName} onChange={handleChange} />
             </Form.Group>
             <Form.Group  controlId="formGridGenre">
                 <Form.Label>Genre</Form.Label>
