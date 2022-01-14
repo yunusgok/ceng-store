@@ -1,8 +1,6 @@
 # Ceng Store
 the project is a mock digital video game distribution services originate from Steam and Epic Games Store,
 that people can play, rate and comment on games. Add and remove user, disable and enable comment for a game.
-## Site
-[https://ceng-store.oa.r.appspot.com/](https://ceng-store.oa.r.appspot.com/)
 ### System
 #### Database
 MongoDB used for database and it is on MongoDB Atlas
